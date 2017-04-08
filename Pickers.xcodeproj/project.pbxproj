@@ -12,6 +12,11 @@
 		4BA5CE0D1E98C58200387A06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BA5CE0B1E98C58200387A06 /* Main.storyboard */; };
 		4BA5CE0F1E98C58200387A06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BA5CE0E1E98C58200387A06 /* Assets.xcassets */; };
 		4BA5CE121E98C58200387A06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BA5CE101E98C58200387A06 /* LaunchScreen.storyboard */; };
+		4BA5CE1A1E98C69A00387A06 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA5CE191E98C69A00387A06 /* DatePickerViewController.swift */; };
+		4BA5CE1E1E98C6FA00387A06 /* DoubleComponentPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA5CE1D1E98C6FA00387A06 /* DoubleComponentPickerViewController.swift */; };
+		4BA5CE201E98C72100387A06 /* DependentComponentPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA5CE1F1E98C72100387A06 /* DependentComponentPickerViewController.swift */; };
+		4BA5CE221E98C74B00387A06 /* CustomPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA5CE211E98C74B00387A06 /* CustomPickerViewController.swift */; };
+		4BA5CE241E98C7B700387A06 /* SingleComponentPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA5CE231E98C7B700387A06 /* SingleComponentPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		4BA5CE0E1E98C58200387A06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BA5CE111E98C58200387A06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BA5CE131E98C58200387A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BA5CE191E98C69A00387A06 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		4BA5CE1D1E98C6FA00387A06 /* DoubleComponentPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleComponentPickerViewController.swift; sourceTree = "<group>"; };
+		4BA5CE1F1E98C72100387A06 /* DependentComponentPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependentComponentPickerViewController.swift; sourceTree = "<group>"; };
+		4BA5CE211E98C74B00387A06 /* CustomPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPickerViewController.swift; sourceTree = "<group>"; };
+		4BA5CE231E98C7B700387A06 /* SingleComponentPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleComponentPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,11 @@
 			children = (
 				4BA5CE071E98C58200387A06 /* AppDelegate.swift */,
 				4BA5CE091E98C58200387A06 /* ViewController.swift */,
+				4BA5CE191E98C69A00387A06 /* DatePickerViewController.swift */,
+				4BA5CE231E98C7B700387A06 /* SingleComponentPickerViewController.swift */,
+				4BA5CE1D1E98C6FA00387A06 /* DoubleComponentPickerViewController.swift */,
+				4BA5CE1F1E98C72100387A06 /* DependentComponentPickerViewController.swift */,
+				4BA5CE211E98C74B00387A06 /* CustomPickerViewController.swift */,
 				4BA5CE0B1E98C58200387A06 /* Main.storyboard */,
 				4BA5CE0E1E98C58200387A06 /* Assets.xcassets */,
 				4BA5CE101E98C58200387A06 /* LaunchScreen.storyboard */,
@@ -138,7 +153,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BA5CE0A1E98C58200387A06 /* ViewController.swift in Sources */,
+				4BA5CE201E98C72100387A06 /* DependentComponentPickerViewController.swift in Sources */,
+				4BA5CE1E1E98C6FA00387A06 /* DoubleComponentPickerViewController.swift in Sources */,
+				4BA5CE241E98C7B700387A06 /* SingleComponentPickerViewController.swift in Sources */,
+				4BA5CE221E98C74B00387A06 /* CustomPickerViewController.swift in Sources */,
 				4BA5CE081E98C58200387A06 /* AppDelegate.swift in Sources */,
+				4BA5CE1A1E98C69A00387A06 /* DatePickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
