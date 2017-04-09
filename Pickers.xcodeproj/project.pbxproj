@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B0E906D1E99F83E00496715 /* statedictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B0E906C1E99F83E00496715 /* statedictionary.plist */; };
 		4BA5CE081E98C58200387A06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA5CE071E98C58200387A06 /* AppDelegate.swift */; };
 		4BA5CE0A1E98C58200387A06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA5CE091E98C58200387A06 /* ViewController.swift */; };
 		4BA5CE0D1E98C58200387A06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BA5CE0B1E98C58200387A06 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B0E906C1E99F83E00496715 /* statedictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = statedictionary.plist; sourceTree = "<group>"; };
 		4BA5CE041E98C58200387A06 /* Pickers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pickers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA5CE071E98C58200387A06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BA5CE091E98C58200387A06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				4BA5CE0E1E98C58200387A06 /* Assets.xcassets */,
 				4BA5CE101E98C58200387A06 /* LaunchScreen.storyboard */,
 				4BA5CE131E98C58200387A06 /* Info.plist */,
+				4B0E906C1E99F83E00496715 /* statedictionary.plist */,
 			);
 			path = Pickers;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			files = (
 				4BA5CE121E98C58200387A06 /* LaunchScreen.storyboard in Resources */,
 				4BA5CE0F1E98C58200387A06 /* Assets.xcassets in Resources */,
+				4B0E906D1E99F83E00496715 /* statedictionary.plist in Resources */,
 				4BA5CE0D1E98C58200387A06 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +328,7 @@
 				4BA5CE181E98C58200387A06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

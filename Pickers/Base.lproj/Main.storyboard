@@ -20,9 +20,34 @@
                     <view key="view" contentMode="scaleToFill" id="E6H-vV-9pN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="206-T0-4Bh">
+                                <rect key="frame" x="165" y="252" width="44" height="30"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="yeb-gg-hYA" eventType="touchUpInside" id="zRf-Kq-LBg"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7N6-XZ-U0O">
+                                <rect key="frame" x="27" y="28" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="yeb-gg-hYA" id="k7A-Tm-cc5"/>
+                                    <outlet property="delegate" destination="yeb-gg-hYA" id="7aK-hh-Vtj"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7N6-XZ-U0O" firstAttribute="top" secondItem="5Kc-Ut-I5l" secondAttribute="bottom" constant="8" id="4fQ-K8-avK"/>
+                            <constraint firstItem="206-T0-4Bh" firstAttribute="top" secondItem="7N6-XZ-U0O" secondAttribute="bottom" constant="8" id="Bye-Zg-x4L"/>
+                            <constraint firstItem="206-T0-4Bh" firstAttribute="centerX" secondItem="E6H-vV-9pN" secondAttribute="centerX" id="WbD-nW-pBY"/>
+                            <constraint firstItem="7N6-XZ-U0O" firstAttribute="centerX" secondItem="E6H-vV-9pN" secondAttribute="centerX" id="eCm-Pc-zX3"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Double" image="doubleicon" id="O3v-10-AD5"/>
+                    <connections>
+                        <outlet property="doublePicker" destination="7N6-XZ-U0O" id="6vW-qN-smd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNs-5o-BkM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -50,7 +75,7 @@
         <!--Dependent-->
         <scene sceneID="bFX-5v-EcW">
             <objects>
-                <viewController id="cMg-8x-lSk" customClass="DoubleComponentPickerViewController" customModule="Pickers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cMg-8x-lSk" customClass="DependentComponentPickerViewController" customModule="Pickers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R5X-SX-4Ai"/>
                         <viewControllerLayoutGuide type="bottom" id="wsi-y5-waK"/>
@@ -58,9 +83,34 @@
                     <view key="view" contentMode="scaleToFill" id="wbY-U6-lXX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rdd-c5-9Eo">
+                                <rect key="frame" x="27" y="28" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="cMg-8x-lSk" id="HVI-F0-p4l"/>
+                                    <outlet property="delegate" destination="cMg-8x-lSk" id="20o-XK-poU"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UhA-Am-Lfi">
+                                <rect key="frame" x="165" y="252" width="44" height="30"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="cMg-8x-lSk" eventType="touchUpInside" id="3ry-Pv-kqb"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UhA-Am-Lfi" firstAttribute="centerX" secondItem="wbY-U6-lXX" secondAttribute="centerX" id="BvQ-5J-Lfi"/>
+                            <constraint firstItem="UhA-Am-Lfi" firstAttribute="top" secondItem="Rdd-c5-9Eo" secondAttribute="bottom" constant="8" id="D5g-OH-DQQ"/>
+                            <constraint firstItem="Rdd-c5-9Eo" firstAttribute="centerX" secondItem="wbY-U6-lXX" secondAttribute="centerX" id="EIZ-Qk-kf6"/>
+                            <constraint firstItem="Rdd-c5-9Eo" firstAttribute="top" secondItem="R5X-SX-4Ai" secondAttribute="bottom" constant="8" id="fcZ-KW-g0e"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dependent" image="dependenticon" id="xob-Q6-ZiF"/>
+                    <connections>
+                        <outlet property="dependentPicker" destination="Rdd-c5-9Eo" id="hUh-9P-fOM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qCi-1T-FXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,9 +127,34 @@
                     <view key="view" contentMode="scaleToFill" id="eAH-bY-8Zm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mtf-Jj-HLJ">
+                                <rect key="frame" x="27" y="28" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="9c1-W8-6Tl" id="20p-l8-RNw"/>
+                                    <outlet property="delegate" destination="9c1-W8-6Tl" id="nmT-C6-iMc"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tD3-jZ-seF">
+                                <rect key="frame" x="165" y="252" width="44" height="30"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="9c1-W8-6Tl" eventType="touchUpInside" id="OcQ-Ja-fFR"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tD3-jZ-seF" firstAttribute="centerX" secondItem="eAH-bY-8Zm" secondAttribute="centerX" id="04K-lt-3VL"/>
+                            <constraint firstItem="tD3-jZ-seF" firstAttribute="top" secondItem="mtf-Jj-HLJ" secondAttribute="bottom" constant="8" id="hSp-0K-3wn"/>
+                            <constraint firstItem="mtf-Jj-HLJ" firstAttribute="centerX" secondItem="eAH-bY-8Zm" secondAttribute="centerX" id="jHT-hZ-GMp"/>
+                            <constraint firstItem="mtf-Jj-HLJ" firstAttribute="top" secondItem="9SI-L5-WYU" secondAttribute="bottom" constant="8" id="u8f-kX-hJW"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Single" image="singleicon" id="Fbu-fb-krw"/>
+                    <connections>
+                        <outlet property="singlePicker" destination="mtf-Jj-HLJ" id="DW7-pN-5Mg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P1J-aY-9As" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,9 +171,39 @@
                     <view key="view" contentMode="scaleToFill" id="9b8-ri-xUg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="3TC-sI-1no">
+                                <rect key="frame" x="28" y="28" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="513376965.27571201">
+                                    <!--2017-04-08 20:42:45 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                    <!--1970-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="6311300400">
+                                    <!--2200-12-31 11:00:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DID-D3-tfc">
+                                <rect key="frame" x="166" y="252" width="44" height="30"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="t11-2H-sac" eventType="touchUpInside" id="Hee-nb-G6o"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DID-D3-tfc" firstAttribute="centerX" secondItem="3TC-sI-1no" secondAttribute="centerX" id="Kxd-4V-moI"/>
+                            <constraint firstItem="3TC-sI-1no" firstAttribute="centerX" secondItem="9b8-ri-xUg" secondAttribute="centerX" id="cFQ-Vh-KMY"/>
+                            <constraint firstItem="DID-D3-tfc" firstAttribute="top" secondItem="3TC-sI-1no" secondAttribute="bottom" constant="8" symbolic="YES" id="dYS-ul-q55"/>
+                            <constraint firstItem="3TC-sI-1no" firstAttribute="top" secondItem="9pa-qQ-gNx" secondAttribute="bottom" constant="8" id="pxj-9S-vZ2"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Date" image="clockicon" id="qEg-PP-B42"/>
+                    <connections>
+                        <outlet property="datePicker" destination="3TC-sI-1no" id="WYK-bP-Brc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hd5-qq-iXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
