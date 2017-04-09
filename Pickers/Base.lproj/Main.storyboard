@@ -64,13 +64,48 @@
                     <view key="view" contentMode="scaleToFill" id="DpN-8T-N0c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j5W-Nq-g6V">
+                                <rect key="frame" x="27" y="28" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="q6p-2g-Cpy" id="Cwh-Nb-6rg"/>
+                                    <outlet property="delegate" destination="q6p-2g-Cpy" id="vhw-mn-Izs"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEE-KP-gle">
+                                <rect key="frame" x="172" y="260" width="31" height="30"/>
+                                <state key="normal" title="Spin"/>
+                                <connections>
+                                    <action selector="spin:" destination="q6p-2g-Cpy" eventType="touchUpInside" id="lVg-L1-l3k"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Owa-KX-4Ah">
+                                <rect key="frame" x="187.5" y="252" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="36"/>
+                                <color key="textColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="j5W-Nq-g6V" firstAttribute="centerX" secondItem="DpN-8T-N0c" secondAttribute="centerX" id="0eB-zk-KPb"/>
+                            <constraint firstItem="Owa-KX-4Ah" firstAttribute="centerX" secondItem="DpN-8T-N0c" secondAttribute="centerX" id="6KY-TW-QTE"/>
+                            <constraint firstItem="oEE-KP-gle" firstAttribute="centerX" secondItem="DpN-8T-N0c" secondAttribute="centerX" id="B7H-Rc-ZCl"/>
+                            <constraint firstItem="j5W-Nq-g6V" firstAttribute="top" secondItem="Gza-7W-kSj" secondAttribute="bottom" constant="8" id="TMb-Lf-P45"/>
+                            <constraint firstItem="oEE-KP-gle" firstAttribute="top" secondItem="Owa-KX-4Ah" secondAttribute="bottom" constant="8" id="YFr-0O-5r6"/>
+                            <constraint firstItem="Owa-KX-4Ah" firstAttribute="top" secondItem="j5W-Nq-g6V" secondAttribute="bottom" constant="8" id="ak6-ft-e8f"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Custom" image="toolicon" id="cwy-XC-WTm"/>
+                    <connections>
+                        <outlet property="button" destination="oEE-KP-gle" id="z4m-GE-Qs4"/>
+                        <outlet property="picker" destination="j5W-Nq-g6V" id="CyQ-J1-joX"/>
+                        <outlet property="winLabel" destination="Owa-KX-4Ah" id="CYU-Wt-wi2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SqC-3y-v3L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1279" y="238"/>
+            <point key="canvasLocation" x="1277.5999999999999" y="237.93103448275863"/>
         </scene>
         <!--Dependent-->
         <scene sceneID="bFX-5v-EcW">
